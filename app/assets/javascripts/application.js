@@ -11,23 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
 
 
-$(document).ready(function(){
-	// animates nav li top border
-	$('.nav-li').mouseenter(function(){
-		$(this).css({"border-top": "0px solid #6595FF"}).animate({
-	        'borderWidth': '6px',
-	        'borderColor': '#6595FF'
-	    	},500);
-		}).mouseleave(function(){
-	    	$(this).animate({
-	        	'borderWidth':'0px',
-	        	'borderColor':'#6595FF'
-	       	},500);
-	});		
-
-});
