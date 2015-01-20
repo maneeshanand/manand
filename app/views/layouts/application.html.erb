@@ -5,10 +5,33 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
 </head>
 <body>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+	// animates nav li top border
+		$('.nav-li').mouseenter(function(){
+			$(this).css({"border-top": "0px solid #6595FF"}).animate({
+		        'borderWidth': '6px',
+		        'borderColor': '#6595FF'
+		    	},500);
+			}).mouseleave(function(){
+		    	$(this).animate({
+		        	'borderWidth':'0px',
+		        	'borderColor':'#6595FF'
+		       	},500);
+			});		
 
-<%= yield %>
+		});
+	</script>
+
+<div id="wrapper">
+	
+	<%= yield %>
+
+</div>
 
 </body>
 </html>

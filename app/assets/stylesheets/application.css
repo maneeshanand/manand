@@ -13,3 +13,218 @@
  *= require_tree .
  *= require_self
  */
+
+
+body {
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjZmZmIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPC9zdmc+");
+}
+
+#wrapper {
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+	/*old font*/
+	/*font-family: 'Poiret One', cursive;*/
+	font-family: 'Roboto', sans-serif;
+}
+
+#name h1, #name h2 {
+	text-align: center;
+}
+
+#name {
+	margin-top: 15%;
+}
+
+#alt-name a {
+	text-decoration: none;
+	color: black;
+}
+
+#name h1	{
+	font-size: 50px;
+}
+
+#desc {
+	margin-top: 50px;
+}
+
+
+#nav, #alt-nav {
+	margin-top: 50px;
+}
+
+#alt-nav {
+	display: inline-block;
+}
+
+#nav ul, #alt-nav ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+#nav li, #alt-nav li {
+	display: inline;
+	margin: 0px 25px 0px 25px;
+	padding-top: 5px;
+}
+
+#nav a, #alt-nav a {
+	width: 100px;
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+}
+
+#footer{
+	margin-bottom: 0;
+}
+
+#alt-name {
+	display: inline-block;
+}
+
+#content {
+	margin: 0 auto;
+	width: 700px;
+	text-align: left;
+}
+
+#content ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+#content ul a {
+	text-decoration: none;
+}
+
+#content ul a:hover{
+	text-decoration: underline;
+}
+
+#content img {
+	vertical-align: middle;
+}
+
+#content p{
+	text-align: justify;
+}
+
+
+/*Adds responsive to ipads*/
+
+@media (max-width: 768px) {
+	#wrapper {
+	width: 100%;
+	}
+
+	#nav {
+		width: 100%;
+	}
+
+	#nav ul {
+
+	}
+
+	#nav li {
+		width: 100%;
+		display: block;
+		margin: 10px 0px 10px 0px;
+	}
+
+	#content {
+		width: 100%;
+	}
+}
+
+/*For CSS 3D Flip*/
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+	display: inline-block;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 325px;
+	height: 200px;
+	display: inline-block;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 1s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+.ffront, .fback {
+	height: 180px;
+	width: 320px;
+	border-radius: 3px;
+}
+
+.fback {
+	background-color: white;
+	margin-top: -20px;
+}
+
+.fback p {
+	padding: 0px 10px 0px 10px;
+	font-size: 12px;
+}
+
+.fback h3 {
+	padding: 5px 0px 0px 5px;
+}
+
+/*END 3d Flip*/
+
+#pg {
+	background-image: url("../img/pantanogupta_cropped.png");
+}
+
+#rvyas {
+	background-image: url("../img/rajvyas.png");
+}
+
+#apbeat {
+	background-image: url("../img/apbeat.png");
+}
+
+#cards {
+	background-image: url("../img/cards.png");
+}
+
+#foodly {
+	background-image: url("../img/foodly.png");
+}
+
+#mapt {
+	background-image: url("../img/mapt.png");
+}
