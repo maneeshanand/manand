@@ -230,6 +230,7 @@ body {
 }
 
 /*for accordion*/
+
 .ui-accordion .ui-accordion-header {
 	display: block;
 	cursor: pointer;
